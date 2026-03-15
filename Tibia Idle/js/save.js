@@ -1,19 +1,29 @@
 function saveGame(){
 
-localStorage.setItem(
-"tibiaIdleSave",
-JSON.stringify(player)
-)
+const saveData = {
+
+player: player,
+city: currentCity,
+area: currentArea
+
+}
+
+localStorage.setItem("tibiaIdleSave", JSON.stringify(saveData))
 
 }
 
 function loadGame(){
 
-let save = localStorage.getItem("tibiaIdleSave")
+const savedData = localStorage.getItem("tibiaIdleSave")
 
-if(save){
+if(savedData){
 
-player = JSON.parse(save)
+const data = JSON.parse(savedData)
+
+Object.assign(player, data.player)
+
+currentCity = data.city
+currentArea = data.area
 
 }
 
