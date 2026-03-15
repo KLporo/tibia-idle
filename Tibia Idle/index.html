@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Tibia Idle</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<h1>Tibia Idle</h1>
+
+<div id="playerPanel">
+
+<div>❤️ Vida: <span id="ui_hp"></span></div>
+
+<div>⚔️ Ataque: <span id="ui_atk"></span></div>
+
+<div>🛡️ Defesa: <span id="ui_def"></span></div>
+
+<div>💰 Moedas: <span id="ui_gold"></span></div>
+
+</div>
+
+<div id="menu">
+
+<button onclick="changeState(GameState.BATTLE)">⚔️ Batalhar</button>
+
+<button onclick="changeState(GameState.SHOP)">🛒 Loja</button>
+
+<button onclick="changeState(GameState.CITY)">🌎 Escolher Cidade</button>
+
+</div>
+
+<div id="game"></div>
+
+<script src="data/monstersData.js"></script>
+<script src="data/itemsData.js"></script>
+<script src="data/citiesData.js"></script>
+
+<script src="js/player.js"></script>
+<script src="js/combat.js"></script>
+<script src="js/shop.js"></script>
+<script src="js/save.js"></script>
+<script src="js/game.js"></script>
+
+</body>
+</html>
