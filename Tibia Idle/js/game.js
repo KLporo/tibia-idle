@@ -10,6 +10,14 @@ CITY: "city"
 
 let currentState = GameState.MENU
 
+window.onload = function(){
+
+loadGame()
+
+updatePlayerPanel()
+
+}
+
 function changeState(newState){
 
 currentState = newState
