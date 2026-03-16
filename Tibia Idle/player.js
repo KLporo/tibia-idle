@@ -1,0 +1,1 @@
+let player = {...GAME_CONFIG.PLAYER_BASE}
